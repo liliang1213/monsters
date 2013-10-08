@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--  <html manifest="application.manifest">  -->
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+
+		<title>Legend Of The Dragon</title>
+		<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3540083127" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+     WB2.anyWhere(function(W){
+    W.widget.connectButton({
+        id: "wb_connect_btn",	
+        type:"3,2",
+        callback : {
+            login:function(o){	//登录后的回调函数
+            },	
+            logout:function(){	//退出后的回调函数
+            }
+        }
+    });
+});
+        </script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0
+			}
+			html body {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: black url('images/bg.png') repeat fixed center top
+			}
+			#left {
+				height: 50px;
+				margin: auto;
+				width: 800px;
+			}
+			#inner {
+				-moz-box-shadow: 0px 0px 7px 3px black;
+				-webkit-box-shadow: 0px 0px 7px 3px black;
+				box-shadow: 0px 0px 7px 3px black;
+				margin: auto;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -400px;
+				margin-top: -300px;
+				width: 800px;
+				height: 600px;
+			}
+			canvas {
+				position: absolute;
+			}
+			#bg {
+				position: absolute;
+			}
+			.menu {
+				height: 44px;
+				width: 214px;
+				position: absolute;
+			}
+			#first {
+				top: 396px;
+				left: 298px;
+			}
+			.menu:hover {
+				cursor: pointer;
+			}
+			#second {
+				top: 450px;
+				left: 298px;
+			}
+			#help {
+				top: 499px;
+				left: 298px;
+			}
+			#player1instruct {
+				display: none;
+				float: left;
+				margin-left: 75px;
+				margin-top: 150px;
+			}
+			#player2instruct {
+				display: none;
+				float: right;
+				margin-right: 75px;
+				margin-top: 150px;
+			}
+			#trans {
+				background: black
+			}
+			a img{
+				position:absolute;
+				bottom:0;
+				right:0;
+			}
+
+		</style>
+	</head>
+	<body>
+	
+		<img id="player1instruct"  src="images/player1.png" />
+		<div id="wb_connect_btn"> </div>
+		<div id="inner">
+		
+			<img id="bg" width="800" height="600" />
+			<canvas id="fire" width="800" height="600"></canvas>
+			<canvas id="mandie" width="800" height="600"></canvas>
+			<canvas id="map" width="800" height="600" ></canvas>
+			<canvas id="score" width="800" height="600" ></canvas>
+			<canvas id="enemy" width="800" height="600"></canvas>
+			<canvas id="main" width="800" height="600">
+				Your Broswer don’t support html5 canvas
+			</canvas>
+			<canvas id="trans" width="800" height="600"></canvas>
+			<div id="first" class="menu"></div>
+			<div id="second" class="menu"></div>
+			<div id="help" class="menu"></div>
+		</div>
+		<img id="player2instruct"  src="images/player2.png" />
+	</body>
+
+	<script src="js/qwrap.js"></script>
+	<script src="js/Menu.js"></script>
+	<script src="js/Game.js"></script>
+	<script src="js/Util.js"></script>
+	<script src="js/Const.js"></script>
+	<script src="js/Sound.js"></script>
+	<script src="js/MapArray.js"></script>
+	<script src="js/Map.js"></script>
+	<script src="js/StoneFly.js"></script>
+	<script src="js/FireFly.js"></script>
+	<script src="js/EnemyDie.js"></script>
+	<script src="js/MyManDie.js"></script>
+	<script src="js/StoneBreak.js"></script>
+	<script src="js/FireBreak.js"></script>
+	<script src="js/MyDragon.js" charset="UTF-8"></script>
+	<script src="js/Dragon.js"></script>
+	<script src="js/Stego.js"></script>
+	<script src="js/Main.js"></script>
+	
+
+
+	<script>
+		window.onload = function() {
+			main();
+		};
+	</script>
+	<script language="javascript" type="text/javascript" src="http://s23.cnzz.com/stat.php?id=5475663&web_id=5475663&show=pic"></script>
+</html>

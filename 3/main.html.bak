@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- <html manifest="application.manifest"> -->
+    <html>
+    <head>
+    	        <meta charset="UTF-8"/>
+
+        <title>Legend Of The Dragon</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0
+            }
+            html body {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background: black url('images/bg.png') repeat fixed center top
+            }
+            #left {
+                height: 50px;
+                margin: auto;
+                width: 800px;
+            }
+            #inner {
+                -moz-box-shadow: 0px 0px 7px 3px black;
+                -webkit-box-shadow: 0px 0px 7px 3px black;
+                box-shadow: 0px 0px 7px 3px black;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -400px;
+                margin-top: -300px;
+                width: 800px;
+                height: 600px;
+            }
+            canvas {
+                position: absolute;
+            }
+            #bg {
+                position: absolute;
+            }
+            #first {
+                top: 396px;
+                left: 298px;
+                position: absolute;
+            }
+            #second {
+                top: 450px;
+                left: 298px;
+                position: absolute;
+            }
+            #player1instruct{
+            	display:none;
+            	float:left;
+            	margin-left:75px;
+            	margin-top:150px;
+            }
+            #player2instruct{
+            	display:none;
+            	float:right;
+            	margin-right:75px;
+            	margin-top:150px;
+            }
+        
+        
+        </style>
+    </head>
+    <body>
+    	<img id="player1instruct"  src="images/player1.png" />
+        <div id="inner">
+            <img id="bg" width="800" height="600" />
+            <canvas id="fire" width="800" height="600"></canvas>
+            <canvas id="mandie" width="800" height="600"></canvas>
+            <canvas id="map" width="800" height="600" ></canvas>
+            <canvas id="score" width="800" height="600" ></canvas>
+            <canvas id="enemy" width="800" height="600"></canvas>
+            <canvas id="main" width="800" height="600">
+                Your Broswer don’t support html5 canvas
+            </canvas>
+            <canvas id="trans" width="800" height="600"></canvas>
+            <canvas id="first" width="214" height="44"></canvas>
+            <canvas id="second" width="214" height="44"></canvas>
+               <a id="help"  style="position:absolute;top: 495px;left: 340px;"><img src="images/help.png" /> </a>
+        </div>
+          <img id="player2instruct"  src="images/player2.png" />
+    </body>
+    <script src="js/Const.js"></script>
+    <script src="js/Sound.js"></script>
+    <script src="js/MapArray.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="js/StoneFly.js"></script>
+    <script src="js/FireFly.js"></script>
+    <script src="js/EnemyDie.js"></script>
+    <script src="js/MyManDie.js"></script>
+    <script src="js/StoneBreak.js"></script>
+    <script src="js/FireBreak.js"></script>
+    <script src="js/MyDragon.js" charset="UTF-8"></script>
+    <script src="js/Dragon.js"></script>
+    <script src="js/Stego.js"></script>
+    <script src="js/Main.js"></script>
+    <script>
+
+		window.onload = function() {
+			main();
+		};
+    </script>
+</html>
